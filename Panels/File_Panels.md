@@ -26,5 +26,5 @@ Logs
 
 You can read files from remote servers with an SSH tunnel by checking
 the **With Server** option. Once selected, you will be prompted to
-pick from one of the [SSH connections](../SSH Connections.md) you set
+pick from one of the [SSH connections](../SSH_Connections.md) you set
 up previously.

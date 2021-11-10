@@ -11,9 +11,9 @@ application.
 
 * [Installation][./Installation.md]
 * Panels
-  * [Database Panels][./Panels/Database%20Panels.md]
-  * [Code Panels][./Panels/Code%20Panels.md]
-  * [HTTP Panels][./Panels/HTTP%20Panels.md]
-  * [File Panels][./Panels/File%20Panels.md]
-* [Data Sources][./Data%20Sources.md]
-* [SSH Connections][./SSH%20Connections.md]
+  * [Database Panels][./Panels/Database_Panels.md]
+  * [Code Panels][./Panels/Code_Panels.md]
+  * [HTTP Panels][./Panels/HTTP_Panels.md]
+  * [File Panels][./Panels/File_Panels.md]
+* [Data Sources][./Data_Sources.md]
+* [SSH Connections][./SSH_Connections.md]

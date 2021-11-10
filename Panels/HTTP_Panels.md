@@ -7,4 +7,4 @@ PUT, HEAD, or DELETE requests.
 
 HTTP requests can be proxied through an SSH tunnel by checking the
 **With Server** option. Once selected, you will be prompted to pick from
-one of the [SSH connections](../SSH Connections) you set up previously.
+one of the [SSH connections](../SSH_Connections) you set up previously.

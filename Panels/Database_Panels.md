@@ -1,8 +1,7 @@
 # Database Panels
 
 These panels allow you to query databases either locally or through an
-SSH proxy. You must first configure a [data source](../Data
-Sources.md) for the database you want to connect to. Then you can
+SSH proxy. You must first configure a [data source](../Data_Sources.md) for the database you want to connect to. Then you can
 create a new panel and select the Database type and data source you
 created.
 
@@ -34,7 +33,7 @@ Metrics
 Queries can be proxied through an SSH tunnel by checking the **With
 Server** option on the data source definition or panel details. Once
 selected, you will be prompted to pick from one of the [SSH
-connections](../SSH Connections.md) you set up previously.
+connections](../SSH_Connections.md) you set up previously.
 
 ## Oracle
 
