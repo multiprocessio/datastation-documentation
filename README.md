@@ -9,12 +9,11 @@ application.
 
 ## Reference
 
-* [Installation](./Installation.md)
-* [Video Guides](./Video Guides.md)
+* [Installation][./Installation.md]
 * Panels
-  * [Database Panels](./Panels/Database Panels.md)
-  * [Code Panels](./Panels/Code Panels.md)
-  * [HTTP Panels](./Panels/HTTP Panels.md)
-  * [File Panels](./Panels/File Panels.md)
-* [Data Sources](./Data Sources.md)
-* [SSH Connections](./SSH Connections.md)
+  * [Database Panels][./Panels/Database Panels.md]
+  * [Code Panels][./Panels/Code Panels.md]
+  * [HTTP Panels][./Panels/HTTP Panels.md]
+  * [File Panels][./Panels/File Panels.md]
+* [Data Sources][./Data Sources.md]
+* [SSH Connections][./SSH Connections.md]
