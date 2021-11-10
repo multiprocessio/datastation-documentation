@@ -11,7 +11,7 @@ application.
 
 * [Installation](./Installation.md)
 * Panels
-  * [Database Panels](./Panels/Database_Panels.md]
+  * [Database Panels](./Panels/Database_Panels.md)
   * [Code Panels](./Panels/Code_Panels.md)
   * [HTTP Panels](./Panels/HTTP_Panels.md)
   * [File Panels](./Panels/File_Panels.md)
