@@ -1,6 +1,6 @@
 # Installation
 
-## 0.3.0
+## 0.3.0-rc2 (Preview)
 
 DataStation can run as either a desktop application or as a server
 application. You will need to have an OIDC provider if you want to run
@@ -15,10 +15,10 @@ Prerequisites:
 * Nodejs 16+
 * PostgreSQL 11+
 
-Download [datastation-server-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc1/datastation-server-x64-0.3.0-rc1.zip).
+Download [datastation-server-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip).
 
 ```
-curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc1/datastation-server-x64-0.3.0-rc1.zip
+curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip
 unzip datastation-server-*.zip
 ./build/release/install.sh
 ```
@@ -68,19 +68,19 @@ Windows, and Linux.
 
 ### MacOS
 
-Download [darwin-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0/darwin-x64-0.3.0.zip) and unzip. You will need to right-click
+Download [darwin-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2/darwin-x64-0.3.0-rc2.zip) and unzip. You will need to right-click
 the application to click Open so you can run the untrusted
 application.
 
 ### Windows
 
-Download [win32-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0/win32-x64-0.3.0.zip) and unzip. If you get a warning saying
+Download [win32-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2/win32-x64-0.3.0-rc2.zip) and unzip. If you get a warning saying
 "Don't run", click "More info" and click "Run anyway". There may be a
 few second long security scan the first time you run.
 
 ### Linux
 
-Download [linux-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0/linux-x64-0.3.0.zip) and unzip.
+Download [linux-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2/linux-x64-0.3.0-rc2.zip) and unzip.
 
 ### Other
 
