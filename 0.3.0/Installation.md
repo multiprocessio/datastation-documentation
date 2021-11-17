@@ -1,4 +1,4 @@
-# 0.3.0-rc2 (Preview) Installation
+# Installation
 
 DataStation can run as either a desktop application or as a server
 application. You will need to have an OIDC provider if you want to run

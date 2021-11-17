@@ -1,4 +1,4 @@
-# 0.2.0 Installation
+# Installation
 
 Pre-built binaries are provided for 64-bit x86 machines running macOS,
 Windows, and Linux.

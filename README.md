@@ -9,14 +9,14 @@ application.
 
 # Reference
 
-* [Installation](./0.2.0-Installation.md)
+* [Installation](./0.2.0/Installation.md)
 * Panels
-  * [Database Panels](./Panels/Database_Panels.md)
-  * [Code Panels](./Panels/Code_Panels.md)
-  * [HTTP Panels](./Panels/HTTP_Panels.md)
-  * [File Panels](./Panels/File_Panels.md)
-* [Data Sources](./Data_Sources.md)
-* [SSH Connections](./SSH_Connections.md)
+  * [Database Panels](./0.2.0/Panels/Database_Panels.md)
+  * [Code Panels](./0.2.0/Panels/Code_Panels.md)
+  * [HTTP Panels](./0.2.0/Panels/HTTP_Panels.md)
+  * [File Panels](./0.2.0/Panels/File_Panels.md)
+* [Data Sources](./0.2.0/Data_Sources.md)
+* [SSH Connections](./0.2.0/SSH_Connections.md)
 
 # Release Notes
 
