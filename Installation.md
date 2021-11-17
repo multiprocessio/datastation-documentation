@@ -1,6 +1,6 @@
 # Installation
 
-## 0.3.0
+## 0.3.0-rc2 (Preview)
 
 DataStation can run as either a desktop application or as a server
 application. You will need to have an OIDC provider if you want to run
@@ -41,10 +41,10 @@ Prerequisites:
 * Nodejs 16+
 * PostgreSQL 11+
 
-Download [datastation-server-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc1/datastation-server-x64-0.3.0-rc1.zip).
+Download [datastation-server-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip).
 
 ```
-curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc1/datastation-server-x64-0.3.0-rc1.zip
+curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip
 unzip datastation-server-*.zip
 ./build/release/install.sh
 ```
