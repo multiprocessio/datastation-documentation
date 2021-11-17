@@ -5,7 +5,7 @@ SSH proxy. You must first configure a [data source](../Data_Sources.md) for the 
 create a new panel and select the Database type and data source you
 created.
 
-## Supported Databases
+# Supported Databases
 
 Traditional SQL
 
@@ -14,7 +14,7 @@ Traditional SQL
 * Microsoft SQL Server
 * PostgreSQL
 * SQLite
-      
+
 Analytics
 
 * Snowflake
@@ -28,14 +28,14 @@ Metrics
   * Prometheus
   * Influx
 
-## Connecting via SSH proxy
+# Connecting via SSH proxy
 
 Queries can be proxied through an SSH tunnel by checking the **With
 Server** option on the data source definition or panel details. Once
 selected, you will be prompted to pick from one of the [SSH
 connections](../SSH_Connections.md) you set up previously.
 
-## Oracle
+# Oracle
 
 Oracle requires an additional setup step. You must download the
 [instant

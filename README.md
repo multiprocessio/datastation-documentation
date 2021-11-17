@@ -7,9 +7,9 @@ text and binary files. Need to join or munge data? Write embedded
 scripts as needed in Python, JavaScript, Ruby, R, or Julia. All in one
 application.
 
-## Reference
+# Reference
 
-* [Installation](./Installation.md)
+* [Installation](./0.2.0-Installation.md)
 * Panels
   * [Database Panels](./Panels/Database_Panels.md)
   * [Code Panels](./Panels/Code_Panels.md)
@@ -18,7 +18,7 @@ application.
 * [Data Sources](./Data_Sources.md)
 * [SSH Connections](./SSH_Connections.md)
 
-## Release Notes
+# Release Notes
 
 * [0.2.0](https://datastation.multiprocess.io/docs/0.2.0-release-notes.html)
 * [0.1.0](https://datastation.multiprocess.io/docs/0.1.0-release-notes.html)

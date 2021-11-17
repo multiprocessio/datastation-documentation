@@ -3,7 +3,7 @@
 These panels allow you to import files into DataStation from
 disk. Every time the panel is run the file is read again.
 
-## Supported file formats
+# Supported file formats
 
 Data
 
@@ -22,7 +22,7 @@ Logs
 * Newline-delimited JSON
 * Newline-delimited Custom Regex
 
-## With Server
+# With Server
 
 You can read files from remote servers with an SSH tunnel by checking
 the **With Server** option. Once selected, you will be prompted to
