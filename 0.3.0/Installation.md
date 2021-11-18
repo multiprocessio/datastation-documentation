@@ -84,7 +84,3 @@ Next edit `/etc/datastation/config.json` and replace the defaults with your own 
 ```
 
 And then restart the systemd service: `sudo systemctl restart datastation`.
-
-# Older Versions
-
-* [0.2.0 Installation](./0.2.0-Installation.md)
