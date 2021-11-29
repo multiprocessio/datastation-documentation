@@ -39,10 +39,10 @@ Prerequisites:
 * Nodejs 16+
 * PostgreSQL 11+
 
-Download [datastation-server-x64-0.3.0-rc2.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip).
+Download [datastation-server-x64-0.3.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.3.0/datastation-server-x64-0.3.0.zip).
 
 ```
-curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0-rc2-rc1/datastation-server-x64-0.3.0-rc2-rc1.zip
+curl -LO https://github.com/multiprocessio/datastation/releases/download/0.3.0/datastation-server-x64-0.3.0.zip
 unzip datastation-server-*.zip
 ./build/release/install.sh
 ```
