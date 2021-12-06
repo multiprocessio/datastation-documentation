@@ -35,7 +35,7 @@ build them yourself. Follow [instructions in the repo](https://github.com/multip
 ## Light mode/Dark mode
 
 To toggle light or dark mode in the desktop application, you'll need
-to edit `~/DataStation/.settings` and add a new `theme` key to the
+to edit `~/DataStationProjects/.settings` and add a new `theme` key to the
 top-level JSON structure: `, "theme": "dark"`. Then restart the application.
 
 Since it must be valid JSON make sure the key-value pairs in the
