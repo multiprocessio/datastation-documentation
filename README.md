@@ -20,6 +20,7 @@ application.
 
 # Release Notes
 
+* [0.6.0](https://datastation.multiprocess.io/docs/0.6.0-release-notes.html)
 * [0.5.0](https://datastation.multiprocess.io/docs/0.5.0-release-notes.html)
 * [0.4.0](https://datastation.multiprocess.io/docs/0.4.0-release-notes.html)
 * [0.3.0](https://datastation.multiprocess.io/docs/0.3.0-release-notes.html)
