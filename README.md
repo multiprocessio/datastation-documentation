@@ -7,6 +7,13 @@ text and binary files. Need to join or munge data? Write embedded
 scripts as needed in Python, JavaScript, Ruby, R, or Julia. All in one
 application.
 
+# Tutorials
+
+* [Installation](./latest/Installation.md)
+* Query databases
+  * [MySQL](./tutorials/Query_MySQL_with_DataStation.md)
+  * [PostgreSQL](./tutorials/Query_PostgreSQL_with_DataStation.md)
+
 # Reference
 
 * [Installation](./latest/Installation.md)
