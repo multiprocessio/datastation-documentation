@@ -37,6 +37,10 @@ Now create a new panel and select the Database type.
 
 Enter your query and hit play!
 
+Note: there is a bug in DataStation before 0.7.0 that when the query
+is blank no results may be returned. Simply set a query that is
+guaranteed to include all results. For example `age:>0`.
+
 ![Run Elasticsearch query](/tutorials/run-elasticsearch-query.gif)
 
 You can always download the results of a panel by hitting the download
@@ -46,9 +50,9 @@ button. Or you can reference the results in other panels.
 
 # Pull out nested values
 
-Graph and table panels don't play nicely with nested values at the
-moment. So add a new code panel and write a transformation to pull out
-the `_source` values.
+Graph and Table panels in DataStation cannot work with nested values
+at the moment. So add a new code panel and write a transformation to
+pull out the `_source` values.
 
 ![Transform panel results](/tutorials/transform-elasticsearch-panel-results.gif)
 
