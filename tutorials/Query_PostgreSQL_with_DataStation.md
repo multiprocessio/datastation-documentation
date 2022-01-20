@@ -62,3 +62,6 @@ Finally, click the play button to generate the graph. You can download
 the graph as a PNG by clicking the download button.
 
 ![Graph database results](/tutorials/graph-postgresql-database-results.gif)
+
+Note: Ctrl-r is a shortcut for hitting the play button when you are
+focused on one panel.

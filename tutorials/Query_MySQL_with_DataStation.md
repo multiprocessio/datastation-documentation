@@ -34,16 +34,16 @@ dropdown within the data source editor.
 
 Now create a new panel and select the Database type.
 
-![Create database panel](/tutorials/create-database-panel.png)
+![Create database panel](/tutorials/create-mysql-database-panel.gif)
 
 Enter your query and hit play!
 
-![Run MySQL query](/tutorials/run-mysql-query.png)
+![Run MySQL query](/tutorials/run-mysql-query.gif)
 
 You can always download the results of a panel by hitting the download
 button. Or you can reference the results in other panels.
 
-![Download panel results](/tutorials/download-panel-results.png)
+![Download panel results](/tutorials/download-mysql-panel-results.png)
 
 # Graph the results
 
@@ -54,4 +54,7 @@ you'd like to graph.
 Finally, click the play button to generate the graph. You can download
 the graph as a PNG by clicking the download button.
 
-![Graph database results](/tutorials/graph-database-results.png)
+![Graph database results](/tutorials/graph-mysql-database-results.gif)
+
+Note: Ctrl-r is a shortcut for hitting the play button when you are
+focused on one panel.
