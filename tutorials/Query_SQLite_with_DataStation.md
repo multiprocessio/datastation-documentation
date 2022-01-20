@@ -31,6 +31,8 @@ Now create a new panel and select the Database type.
 
 ![Create database panel](/tutorials/create-database-panel.png)
 
+## Run a query
+
 Enter your query and hit play!
 
 ![Run SQLite query](/tutorials/run-sqlite-query.png)
