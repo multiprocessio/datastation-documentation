@@ -13,7 +13,6 @@ application.
 * Query databases
   * [MySQL](./tutorials/Query_MySQL_with_DataStation.md)
   * [PostgreSQL](./tutorials/Query_PostgreSQL_with_DataStation.md)
-  * [SQLite](./tutorials/Query_SQLite_with_DataStation.md)
 
 # Reference
 
