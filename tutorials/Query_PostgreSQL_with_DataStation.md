@@ -2,11 +2,14 @@
 
 # Data source setup
 
-First create a new data source in the left sidebar. Give it a nice
-name so you can easily find it later. And select PostgreSQL in the
-Vendor dropdown.
+First create a new data source in the left sidebar.
 
-![Creating a new data source](/tutorials/create-data-source.png)
+![Creating a new data source](/tutorials/create-data-source.gif)
+
+Give it a nice name so you can easily find it later. And select
+PostgreSQL in the Vendor dropdown.
+
+![Creating a PostgreSQL data source](/tutorials/create-postgresql-data-source.png)
 
 ## Host field
 

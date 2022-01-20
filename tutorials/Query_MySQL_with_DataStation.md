@@ -2,11 +2,14 @@
 
 # Data source setup
 
-First create a new data source in the left sidebar. Give it a nice
-name so you easily can find it later. And select MySQL in the Vendor
-dropdown.
+First create a new data source in the left sidebar.
 
-![Creating a new data source](/tutorials/create-data-source.png)
+![Creating a new data source](/tutorials/create-data-source.gif)
+
+Give it a nice name so you easily can find it later. And select MySQL
+in the Vendor dropdown.
+
+![Creating a MySQL data source](/tutorials/create-mysql-data-source.png)
 
 ## Host field
 
