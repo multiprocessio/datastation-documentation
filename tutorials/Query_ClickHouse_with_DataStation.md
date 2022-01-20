@@ -19,7 +19,7 @@ omit the colon and port and just specify the address.
 
 ## Other fields
 
-Next fill in the username and authentication fields if
+Next fill in the database, username, and password fields if
 necessary. Leaving these fields blank is ok too.
 
 ## SSH Proxy [Optional]
@@ -36,10 +36,6 @@ Now create a new panel and select the Database type.
 ![Create database panel](/tutorials/create-clickhouse-database-panel.gif)
 
 Enter your query and hit play!
-
-Note: there is a bug in DataStation before 0.7.0 that when the query
-is blank no results may be returned. Simply set a query that is
-guaranteed to include all results. For example `age:>0`.
 
 ![Run ClickHouse query](/tutorials/run-clickhouse-query.gif)
 

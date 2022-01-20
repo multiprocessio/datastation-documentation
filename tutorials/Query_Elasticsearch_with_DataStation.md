@@ -51,8 +51,8 @@ button. Or you can reference the results in other panels.
 # Pull out nested values
 
 Graph and Table panels in DataStation cannot work with nested values
-at the moment. So add a new code panel and write a transformation to
-pull out the `_source` values.
+at the moment. So you'll need to add a new code panel and write a
+transformation to pull out the `_source` values.
 
 ![Transform panel results](/tutorials/transform-elasticsearch-panel-results.gif)
 
