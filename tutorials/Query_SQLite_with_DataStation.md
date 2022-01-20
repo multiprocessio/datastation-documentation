@@ -1,7 +1,6 @@
 # Querying SQLite with DataStation
-## Updated January 19, 2022
 
-### Data source setup
+# Data source setup
 
 First create a new data source in the left sidebar. And select
 SQLite in the Vendor dropdown.
@@ -14,7 +13,7 @@ Next set your database, username, and password.
 
 ![Filled out SQLite data source](/tutorials/sqlite-data-source-filled.png)
 
-### Remote connection [Optional]
+## Remote connection [Optional]
 
 If you want connect to a SQLite database on a remote server, you will
 need to set up the SSH connection to that server first. Once you do,
@@ -22,7 +21,7 @@ you can select that connection in the "Via Server" dropdown.
 
 ![SQLite data source via server](/tutorials/sqlite-via-server.png)
 
-### Panel setup
+# Panel setup
 
 Now create a new panel and select the Database type.
 
@@ -32,7 +31,12 @@ Enter your query and hit play!
 
 ![Run SQLite query](/tutorials/run-sqlite-query.png)
 
-### Graph the results
+You can always download the results of a panel by hitting the download
+button. Or you can reference the results in other panels.
+
+![Download panel results](/tutorials/download-panel-results.png)
+
+# Graph the results
 
 Create a new panel. Change the type to Graph. Select the previous
 Database panel as the panel source. Then select the X and Y columns
