@@ -13,6 +13,10 @@ application.
 * Query databases
   * [MySQL](./tutorials/Query_MySQL_with_DataStation.md)
   * [PostgreSQL](./tutorials/Query_PostgreSQL_with_DataStation.md)
+  * [Oracle](./tutorials/Query_Oracle_with_DataStation.md)
+  * [SQL Server](./tutorials/Query_SQL_Server_with_DataStation.md)
+  * [Elasticsearch](./tutorials/Query_Elasticsearch_with_DataStation.md)
+  * [ClickHouse](./tutorials/Query_ClickHouse_with_DataStation.md)
 
 # Reference
 
