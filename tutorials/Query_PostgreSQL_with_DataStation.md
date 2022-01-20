@@ -41,16 +41,16 @@ dropdown within the data source editor.
 
 Now create a new panel and select the Database type.
 
-![Create database panel](/tutorials/create-database-panel.png)
+![Create database panel](/tutorials/create-postgresql-database-panel.gif)
 
 Enter your query and hit play!
 
-![Run PostgreSQL query](/tutorials/run-postgresql-query.png)
+![Run PostgreSQL query](/tutorials/run-postgresql-query.gif)
 
 You can always download the results of a panel by hitting the download
 button. Or you can reference the results in other panels.
 
-![Download panel results](/tutorials/download-panel-results.png)
+![Download panel results](/tutorials/download-postgresql-panel-results.png)
 
 # Graph the results
 
@@ -61,4 +61,4 @@ you'd like to graph. Defaults are chosen for you.
 Finally, click the play button to generate the graph. You can download
 the graph as a PNG by clicking the download button.
 
-![Graph database results](/tutorials/graph-database-results.png)
+![Graph database results](/tutorials/graph-postgresql-database-results.gif)
