@@ -43,6 +43,8 @@ Now create a new panel and select the Database type.
 
 ![Create database panel](/tutorials/create-postgresql-database-panel.gif)
 
+## Run a query
+
 Enter your query and hit play!
 
 ![Run PostgreSQL query](/tutorials/run-postgresql-query.gif)

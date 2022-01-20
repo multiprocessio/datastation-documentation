@@ -36,6 +36,8 @@ Now create a new panel and select the Database type.
 
 ![Create database panel](/tutorials/create-mysql-database-panel.gif)
 
+## Run a query
+
 Enter your query and hit play!
 
 ![Run MySQL query](/tutorials/run-mysql-query.gif)

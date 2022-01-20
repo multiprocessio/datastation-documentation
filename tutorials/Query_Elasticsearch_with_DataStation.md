@@ -35,6 +35,8 @@ Now create a new panel and select the Database type.
 
 ![Create database panel](/tutorials/create-elasticsearch-database-panel.gif)
 
+## Run a query
+
 Enter your query and hit play!
 
 Note: there is a bug in DataStation before 0.7.0 that when the query
