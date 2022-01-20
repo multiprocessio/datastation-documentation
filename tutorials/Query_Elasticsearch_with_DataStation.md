@@ -19,9 +19,8 @@ omit the colon and port and just specify the address.
 
 ## Other fields
 
-Next set your database, username, and password.
-
-![Filled out Elasticsearch data source](/tutorials/elasticsearch-data-source-filled.png)
+Next fill in the username and authentication fields if
+necessary. Leaving these fields blank is ok too.
 
 ## SSH Proxy [Optional]
 
