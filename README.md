@@ -7,6 +7,32 @@ text and binary files. Need to join or munge data? Write embedded
 scripts as needed in Python, JavaScript, Ruby, R, or Julia. All in one
 application.
 
+# Tutorials
+
+* Querying databases
+  * [MySQL](./tutorials/Query_MySQL_with_DataStation.md)
+  * [PostgreSQL](./tutorials/Query_PostgreSQL_with_DataStation.md)
+  * [SQLite](./tutorials/Query_SQLite_with_DataStation.md)
+  * [Oracle](./tutorials/Query_Oracle_with_DataStation.md)
+  * [SQL Server](./tutorials/Query_SQL_Server_with_DataStation.md)
+  * [ClickHouse](./tutorials/Query_ClickHouse_with_DataStation.md)
+  * [Elasticsearch](./tutorials/Query_Elasticsearch_with_DataStation.md)
+  * [InfluxDB](./tutorials/Query_InfluxDB_with_DataStation.md)
+  * [Prometheus](./tutorials/Query_Prometheus_with_DataStation.md)
+* Running SQL queries on files
+  * [CSV](./tutorials/Running_SQL_queries_on_CSV_files_with_DataStation.md)
+  * [Parquet](./tutorials/Running_SQL_queries_on_Parquet_files_with_DataStation.md)
+  * [JSON](./tutorials/Running_SQL_queries_on_JSON_files_with_DataStation.md)
+  * [Excel](./tutorials/Running_SQL_queries_on_Excel_sheets_with_DataStation.md)
+* Transforming data
+  * [with Python](./tutorials/Transforming_data_with_Python_with_DataStation.md)
+  * [with Ruby](./tutorials/Transforming_data_with_Ruby_with_DataStation.md)
+  * [with Nodejs](./tutorials/Transforming_data_with_Nodejs_with_DataStation.md)
+  * [with R](./tutorials/Transforming_data_with_R_with_DataStation.md)
+  * [with Julia](./tutorials/Transforming_data_with_Julia_with_DataStation.md)
+  * [with PHP](./tutorials/Transforming_data_with_PHP_with_DataStation.md)
+  * [with SQL](./tutorials/Transforming_data_with_SQL_with_DataStation.md)
+
 # Reference
 
 * [Installation](./latest/Installation.md)
