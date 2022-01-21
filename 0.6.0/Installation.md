@@ -30,7 +30,7 @@ Download [datastation-linux-x64-0.6.0.zip](https://github.com/multiprocessio/dat
 ## Other
 
 Other systems and architectures may be supported but you will need to
-build them yourself. Follow [instructions in the repo](https://github.com/multiprocessio/datastation/blob/master/HACKING.md).
+build them yourself. Follow [instructions in the repo](https://github.com/multiprocessio/datastation/blob/main/HACKING.md).
 
 ## Light mode/Dark mode
 
