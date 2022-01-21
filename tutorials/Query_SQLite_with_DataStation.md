@@ -1,4 +1,4 @@
-# Querying SQLite with DataStation
+# Query SQLite with DataStation
 
 # Data source setup
 

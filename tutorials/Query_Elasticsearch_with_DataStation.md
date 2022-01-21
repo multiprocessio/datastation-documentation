@@ -1,4 +1,4 @@
-# Querying Elasticsearch with DataStation
+# Query Elasticsearch with DataStation
 
 # Data source setup
 

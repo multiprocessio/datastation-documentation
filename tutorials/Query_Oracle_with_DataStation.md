@@ -1,4 +1,4 @@
-# Querying Oracle with DataStation
+# Query Oracle with DataStation
 
 # Data source setup
 

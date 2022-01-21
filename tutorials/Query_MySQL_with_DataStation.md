@@ -1,4 +1,4 @@
-# Querying MySQL with DataStation
+# Query MySQL with DataStation
 
 # Data source setup
 

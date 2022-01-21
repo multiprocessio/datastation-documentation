@@ -17,6 +17,9 @@ application.
   * [SQL Server](./tutorials/Query_SQL_Server_with_DataStation.md)
   * [Elasticsearch](./tutorials/Query_Elasticsearch_with_DataStation.md)
   * [ClickHouse](./tutorials/Query_ClickHouse_with_DataStation.md)
+* Transform data
+  * [with Python](./tutorials/Transform_data_with_Python_in_DataStation.md)
+  * [with SQL](./tutorials/Transform_data_with_SQL_in_DataStation.md)
 
 # Reference
 

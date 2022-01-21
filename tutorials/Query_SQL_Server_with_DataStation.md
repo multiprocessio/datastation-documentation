@@ -1,4 +1,4 @@
-# Querying SQL Server with DataStation
+# Query SQL Server with DataStation
 
 # Data source setup
 

@@ -1,4 +1,4 @@
-# Querying ClickHouse with DataStation
+# Query ClickHouse with DataStation
 
 # Data source setup
 
