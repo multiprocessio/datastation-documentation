@@ -48,11 +48,9 @@ Enter your query and hit play!
 Additional notes:
 * Do not include a trailing semicolon on the last statement otherwise
   the query will fail.
-* Statements that do not return rows (like `CREATE` or `INSERT`
-  statements) will succeed but show an error. Ignore the error. This
-  is a bug. [See
-  #154](https://github.com/multiprocessio/datastation/issues/154) to
-  follow the issue.
+* There is a bug before DataStation 0.7.0 where statements that do not
+  return rows (like `CREATE` or `INSERT` statements) will succeed but
+  show an error. You can just ignore the error.
 
 ![Run Oracle query](/tutorials/run-oracle-query.gif)
 
