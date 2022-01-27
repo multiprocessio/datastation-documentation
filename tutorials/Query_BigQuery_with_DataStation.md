@@ -1,5 +1,7 @@
 # Querying BigQuery with DataStation
 
+Requires DataStation 0.7.0+.
+
 # Data source setup
 
 First create a new data source in the left sidebar.
@@ -26,14 +28,56 @@ Now create a new panel and select the Database type.
 
 ## Run a query
 
-Enter your query and hit play!
+Let's pull population data from a public BigQuery dataset. Enter the
+following query and hit play!
+
+```sql
+SELECT
+ *
+FROM
+ `bigquery-public-data`.census_bureau_usa.population_by_zip_2010
+ORDER BY population DESC
+LIMIT 10
+```
 
 ![Run BigQuery query](/tutorials/run-bigquery-query.gif)
 
-You can always download the results of a panel by hitting the download
-button. Or you can reference the results in other panels.
+Interesting! But random US zipcodes don't mean very much. So let's
+grab a public CSV of zipcode data that does include the city and state
+information.
 
-![Download panel results](/tutorials/download-bigquery-panel-results.png)
+## Load zipcode metadata
+
+Create an new HTTP panel, enter the following URL, and hit play.
+
+```
+https://raw.githubusercontent.com/scpike/us-state-county-zip/master/geo-data.csv
+```
+
+![Load data over HTTP](/tutorials/run-bigquery-http-panel.gif)
+
+## Join the two datasets
+
+Now that we have the top 10 zipcodes by population and a list of
+zipcodes with names, we can join the two datasets to find the city
+names of the zipcodes with the greatest population.
+
+Create a new panel and select the Program type. Select SQL as the
+language. Enter the following query and hit run.
+
+```sql
+SELECT population, city || ', ' || state
+FROM DM_getPanel(0)
+  LEFT JOIN DM_getPanel(1) ON t_0.zipcode = t_1.zipcode
+WHERE t_1.zipcode IS NOT NULL
+ORDER BY population DESC;
+```
+
+Note: DataStation doesn't allow you to pick table aliases. They
+automatically become `t_N` where `N` is the string passed to
+`DM_getPanel()`.
+
+![Join zipcode data](/tutorials/bigquery-join-zipcodes.gif)
 
 # Graph the results
 
