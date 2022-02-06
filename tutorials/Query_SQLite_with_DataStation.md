@@ -1,8 +1,21 @@
 # Querying SQLite with DataStation
 
+# Database initialization [Optional]
+
+If you want to follow along with this tutorial literally, in your
+terminal create a SQLite database and enter this sample data:
+
+```bash
+$ sqlite3 ~/test.sqlite
+SQLite version 3.36.0 2021-06-18 18:58:49
+Enter ".help" for usage hints.
+sqlite> create table test(name text, age int);
+sqlite> insert into test values ('Kara', 24), ('Mike', 30);
+```
+
 # Data source setup
 
-First create a new data source in the left sidebar.
+Now inside DataStation, create a new data source in the left sidebar.
 
 ![Creating a new data source](/tutorials/create-data-source.gif)
 
