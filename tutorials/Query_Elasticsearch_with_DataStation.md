@@ -1,8 +1,26 @@
 # Querying Elasticsearch with DataStation
 
+# Database initialization [Optional]
+
+If you want to follow along with this tutorial literally, in your
+terminal start Elasticsearch in Docker:
+
+```bash
+$ docker run -p 127.0.0.1:9200:9200 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+```
+
+Then create an index with curl and add some data:
+
+```bash
+$ curl -H 'Content-Type: application/json' -XPOST "http://localhost:9200/users/_doc" -d '{"name": "Tiara", "age": 44}'
+{"_index":"users","_type":"_doc","_id":"-yI80X4BjZbj9lUqh0G7","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1}
+$ curl -H 'Content-Type: application/json' -XPOST "http://localhost:9200/users/_doc" -d '{"name": "Carah", "age": 29}'
+{"_index":"users","_type":"_doc","_id":"_CI80X4BjZbj9lUqyUHI","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1}
+```
+
 # Data source setup
 
-First create a new data source in the left sidebar.
+Now inside DataStation create a new data source in the left sidebar.
 
 ![Creating a new data source](/tutorials/create-data-source.gif)
 
@@ -39,35 +57,27 @@ Now create a new panel and select the Database type.
 
 Enter your query and hit play!
 
-Note: there is a bug in DataStation before 0.7.0 that when the query
-is blank no results may be returned. Simply set a query that is
-guaranteed to include all results. For example `age:>0`.
-
 ![Run Elasticsearch query](/tutorials/run-elasticsearch-query.gif)
+
+Note: Ctrl-r is a shortcut for hitting the play button when you are
+focused on one panel.
 
 You can always download the results of a panel by hitting the download
 button. Or you can reference the results in other panels.
 
 ![Download panel results](/tutorials/download-elasticsearch-panel-results.png)
 
-# Pull out nested values
-
-Graph and Table panels in DataStation cannot work with nested values
-at the moment. So you'll need to add a new code panel and write a
-transformation to pull out the `_source` values.
-
-![Transform panel results](/tutorials/transform-elasticsearch-panel-results.gif)
-
 # Graph the results
 
-Create a new panel. Change the type to Graph. Select the previous
-Database panel as the panel source. Then select the X and Y columns
-you'd like to graph.
+After running the query, a graph button will appear below the panel
+next to the New Panel button. Click it to generate a graph based on
+this panel.
 
-Finally, click the play button to generate the graph. You can download
-the graph as a PNG by clicking the download button.
+DataStation tries to guess which columns to graph but it doesn't
+always get it right. Select the name and age columns for the x and y
+dimensions respectively.
 
 ![Graph database results](/tutorials/graph-elasticsearch-database-results.gif)
 
-Note: Ctrl-r is a shortcut for hitting the play button when you are
-focused on one panel.
+Note: when the query panel changes in the future you'll need to
+manually re-run the graph panel.

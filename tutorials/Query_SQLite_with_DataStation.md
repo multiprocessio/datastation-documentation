@@ -48,6 +48,9 @@ Enter your query and hit play!
 
 ![Run SQLite query](/tutorials/run-sqlite-query.gif)
 
+Note: Ctrl-r is a shortcut for hitting the play button when you are
+focused on one panel.
+
 You can always download the results of a panel by hitting the download
 button. Or you can reference the results in other panels.
 
