@@ -38,8 +38,8 @@ in the Vendor dropdown.
 
 ## Host field
 
-If you are connecting to `localhost:9200` (the default), you can
-leave the host field blank. If your port is 9200 then you can always
+If you are connecting to `localhost:8080` (the default), you can
+leave the host field blank. If your port is 8080 then you can always
 omit the colon and port and just specify the address.
 
 ## Other fields
