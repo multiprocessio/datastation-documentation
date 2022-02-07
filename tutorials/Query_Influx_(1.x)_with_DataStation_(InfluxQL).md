@@ -40,8 +40,13 @@ omit the colon and port and just specify the address.
 
 ## Other fields
 
+In this case the database is `test` based on how we started the Docker
+container.
+
 Next fill in the username and authentication fields if
 necessary. Leaving these fields blank is ok too.
+
+![Filled Influx data source](/tutorials/influx-data-source-filled.png)
 
 ## SSH Proxy [Optional]
 
