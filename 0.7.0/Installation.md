@@ -13,19 +13,19 @@ Windows, and Linux.
 
 ## MacOS
 
-Download [datastation-darwin-x64-0.6.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.6.0/datastation-darwin-x64-0.6.0.zip) and unzip. You will need to right-click
+Download [datastation-darwin-x64-0.7.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.7.0/datastation-darwin-x64-0.7.0.zip) and unzip. You will need to right-click
 the application to click Open so you can run the untrusted
 application.
 
 ## Windows
 
-Download [datastation-win32-x64-0.6.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.6.0/datastation-win32-x64-0.6.0.zip) and unzip. If you get a warning saying
+Download [datastation-win32-x64-0.7.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.7.0/datastation-win32-x64-0.7.0.zip) and unzip. If you get a warning saying
 "Don't run", click "More info" and click "Run anyway". There may be a
 few second long security scan the first time you run.
 
 ## Linux
 
-Download [datastation-linux-x64-0.6.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.6.0/datastation-linux-x64-0.6.0.zip) and unzip.
+Download [datastation-linux-x64-0.7.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.7.0/datastation-linux-x64-0.7.0.zip) and unzip.
 
 ## Other
 
@@ -45,10 +45,10 @@ Prerequisites:
 * Nodejs 16+
 * PostgreSQL 11+
 
-Download [datastation-server-x64-0.6.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.6.0/datastation-server-x64-0.6.0.zip).
+Download [datastation-server-x64-0.7.0.zip](https://github.com/multiprocessio/datastation/releases/download/0.7.0/datastation-server-x64-0.7.0.zip).
 
 ```
-curl -LO https://github.com/multiprocessio/datastation/releases/download/0.6.0/datastation-server-x64-0.6.0.zip
+curl -LO https://github.com/multiprocessio/datastation/releases/download/0.7.0/datastation-server-x64-0.7.0.zip
 unzip datastation-server-*.zip
 ./build/release/install.sh
 ```
