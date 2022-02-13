@@ -1,8 +1,38 @@
 # Query PostgreSQL with DataStation
 
+# Database initialization [Optional]
+
+If you want to follow along with this tutorial literally, in your
+terminal start PostgreSQL in Docker:
+
+```bash
+$ cid=$(docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres)
+```
+
+Now create a table for some address data.
+
+```bash
+$ docker exec $cid psql -U postgres -c 'CREATE TABLE addresses (id BIGINT, location_id BIGINT, address_1 TEXT, address_2 TEXT, city TEXT, state_province TEXT, postal_code TEXT, country TEXT);'
+CREATE TABLE
+```
+
+Then download a [CSV of sample
+addresses](https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv)
+from Github, copy it into the Docker container, and load the addresses
+into this new table.
+
+```bash
+$ curl -LO https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv
+$ docker cp ./addresses.csv $cid:/tmp/addresses.csv
+$ docker exec $cid psql -U postgres -c "COPY addresses FROM '/tmp/addresses.csv' DELIMITER ',' CSV HEADER;"
+COPY 21
+```
+
+And we're done!
+
 # Data source setup
 
-First create a new data source in the left sidebar.
+Now inside DataStation create a new data source in the left sidebar.
 
 ![Creating a new data source](/tutorials/create-data-source.gif)
 
@@ -13,7 +43,7 @@ PostgreSQL in the Vendor dropdown.
 
 ## Host field
 
-If you are running the host on localhost:5432 (the default) and you
+If you are running the host on `localhost:5432` (the default) and you
 have SSL set up, you can leave the host field blank.
 
 Additional notes:
@@ -24,9 +54,14 @@ Additional notes:
   `localhost:5432?sslmode=disable`.
 * If the port is 5432 then you can always omit the colon and port
 
+In this case since we are not running with TLS we must specify
+`?sslmode=disable`.
+
 ## Other fields
 
-Next set your database, username, and password.
+Next we set the database to `postgres`, the username to `postgres`,
+and the password to `postgres` (we specified this when we started the
+Docker container).
 
 ![Filled out PostgreSQL data source](/tutorials/postgresql-data-source-filled.png)
 
@@ -54,16 +89,13 @@ button. Or you can reference the results in other panels.
 
 ![Download panel results](/tutorials/download-postgresql-panel-results.png)
 
-# Graph the results
+# Display results
 
-Create a new panel. Change the type to Graph. Select the previous
-Database panel as the panel source. Then select the X and Y columns
-you'd like to graph. Defaults are chosen for you.
+After running the query, a table button will appear below the panel
+next to the New Panel button. Click it to generate a table based on
+this panel.
 
-Finally, click the play button to generate the graph. You can download
-the graph as a PNG by clicking the download button.
+![Render results](/tutorials/graph-postgresql-database-results.gif)
 
-![Graph database results](/tutorials/graph-postgresql-database-results.gif)
-
-Note: Ctrl-r is a shortcut for hitting the play button when you are
-focused on one panel.
+Note: when the query panel changes in the future you'll need to
+manually re-run the table panel.
