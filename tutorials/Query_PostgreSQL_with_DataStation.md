@@ -9,14 +9,14 @@ terminal start PostgreSQL in Docker:
 $ cid=$(docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres)
 ```
 
-Now let's create a table for some address data.
+Now create a table for some address data.
 
 ```bash
 $ docker exec $cid psql -U postgres -c 'CREATE TABLE addresses (id BIGINT, location_id BIGINT, address_1 TEXT, address_2 TEXT, city TEXT, state_province TEXT, postal_code TEXT, country TEXT);'
 CREATE TABLE
 ```
 
-And let's download a [CSV of sample
+Then download a [CSV of sample
 addresses](https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv)
 from Github, copy it into the Docker container, and load the addresses
 into this new table.

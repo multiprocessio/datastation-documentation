@@ -1,13 +1,44 @@
-# Querying MySQL with DataStation
+# Query MySQL with DataStation
+
+# Database initialization [Optional]
+
+If you want to follow along with this tutorial literally, in your
+terminal start MySQL in Docker:
+
+```bash
+$ cid=$(docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql)
+```
+
+Now create a table for some address data (it may take a few retries to
+run this command while MySQL is initializing).
+
+```bash
+$ docker exec $cid mysql -uroot -proot mysql --execute 'CREATE TABLE addresses (id BIGINT, location_id BIGINT, address_1 TEXT, address_2 TEXT, city TEXT, state_province TEXT, postal_code TEXT, country TEXT);'
+mysql: [Warning] Using a password on the command line interface can be insecure.
+```
+
+Then download a [CSV of sample
+addresses](https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv)
+from Github, copy it into the Docker container, and load the addresses
+into this new table.
+
+```bash
+$ curl -LO https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv
+$ docker cp ./addresses.csv $cid:/tmp/addresses.csv
+$ docker exec $cid mysql --local-infile=1 -uroot -proot mysql --execute "SET GLOBAL local_infile=1; LOAD DATA LOCAL INFILE '/tmp/addresses.csv' INTO TABLE addresses FIELDS TERMINATED BY ',' ENCLOSED BY '""' IGNORE 1 ROWS;"
+mysql: [Warning] Using a password on the command line interface can be insecure.
+```
+
+And we're done!
 
 # Data source setup
 
-First create a new data source in the left sidebar.
+Now inside DataStation create a new data source in the left sidebar.
 
 ![Creating a new data source](/tutorials/create-data-source.gif)
 
-Give it a nice name so you easily can find it later. And select MySQL
-in the Vendor dropdown.
+Give it a nice name so you can easily find it later. And select
+MySQL in the Vendor dropdown.
 
 ![Creating a MySQL data source](/tutorials/create-mysql-data-source.png)
 
@@ -19,7 +50,9 @@ omit the colon and port and just specify the address.
 
 ## Other fields
 
-Next set your database, username, and password.
+Next we set the database to `mysql`, the username to `root`, and the
+password to `root` (we specified this when we started the Docker
+container).
 
 ![Filled out MySQL data source](/tutorials/mysql-data-source-filled.png)
 
@@ -47,16 +80,13 @@ button. Or you can reference the results in other panels.
 
 ![Download panel results](/tutorials/download-mysql-panel-results.png)
 
-# Graph the results
+# Display results
 
-Create a new panel. Change the type to Graph. Select the previous
-Database panel as the panel source. Then select the X and Y columns
-you'd like to graph.
+After running the query, a table button will appear below the panel
+next to the New Panel button. Click it to generate a table based on
+this panel.
 
-Finally, click the play button to generate the graph. You can download
-the graph as a PNG by clicking the download button.
+![Render results](/tutorials/graph-mysql-database-results.gif)
 
-![Graph database results](/tutorials/graph-mysql-database-results.gif)
-
-Note: Ctrl-r is a shortcut for hitting the play button when you are
-focused on one panel.
+Note: when the query panel changes in the future you'll need to
+manually re-run the table panel.
