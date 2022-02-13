@@ -1,4 +1,4 @@
-# Query PostgreSQL with DataStation
+# Run PostgreSQL in Docker and query with DataStation
 
 # Database initialization [Optional]
 

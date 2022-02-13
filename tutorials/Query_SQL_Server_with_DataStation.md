@@ -1,4 +1,4 @@
-# Querying SQL Server with DataStation
+# Run SQL Server in Docker and query with DataStation
 
 # Database initialization [Optional]
 

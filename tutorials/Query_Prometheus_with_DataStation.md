@@ -1,4 +1,4 @@
-# Querying Prometheus with DataStation
+# Run Prometheus in Docker and query with DataStation
 
 # Database initialization [Optional]
 

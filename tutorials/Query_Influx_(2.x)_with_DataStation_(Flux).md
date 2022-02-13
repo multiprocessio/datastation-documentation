@@ -1,4 +1,4 @@
-# Querying Influx (2.x) with DataStation (Flux)
+# Run Influx 2.x in Docker and query (Flux) with DataStation
 
 # Database initialization [Optional]
 

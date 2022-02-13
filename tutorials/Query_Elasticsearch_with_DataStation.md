@@ -1,4 +1,4 @@
-# Querying Elasticsearch with DataStation
+# Run Elasticsearch in Docker and query with DataStation
 
 # Database initialization [Optional]
 

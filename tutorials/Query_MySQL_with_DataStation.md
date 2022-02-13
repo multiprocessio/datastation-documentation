@@ -1,4 +1,4 @@
-# Query MySQL with DataStation
+# Run MySQL in Docker and query with DataStation
 
 # Database initialization [Optional]
 

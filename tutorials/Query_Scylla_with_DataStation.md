@@ -1,4 +1,4 @@
-# Querying Scylla with DataStation
+# Run Scylla in Docker and query with DataStation
 
 # Database initialization [Optional]
 
