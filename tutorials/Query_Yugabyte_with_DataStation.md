@@ -6,7 +6,7 @@ If you want to follow along with this tutorial literally, in your
 terminal start Yugabyte in Docker:
 
 ```bash
-$ cid=$(docker run -p 5433:5433 yugabytedb/yugabyte:latest bin/yugabyted start --daemon=false)
+$ cid=$(docker run -d -p 5433:5433 yugabytedb/yugabyte:latest bin/yugabyted start)
 ```
 
 Yugabyte comes with some great sample data and a [great
