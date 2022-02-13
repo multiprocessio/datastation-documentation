@@ -1,5 +1,9 @@
 # Run Elasticsearch in Docker and query with DataStation
 
+This tutorial walks through running Elasticsearch in Docker, creating
+an index and loading it with documents, and finally querying it in
+DataStation.
+
 # Database initialization [Optional]
 
 If you want to follow along with this tutorial literally, in your

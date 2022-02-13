@@ -1,5 +1,8 @@
 # Run Influx 2.x in Docker and query (Flux) with DataStation
 
+This tutorial walks through running Influx 2.x in Docker, loading it
+with data, and finally querying it in DataStation using Flux.
+
 # Database initialization [Optional]
 
 If you want to follow along with this tutorial literally, in your

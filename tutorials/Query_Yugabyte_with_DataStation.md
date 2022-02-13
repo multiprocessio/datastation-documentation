@@ -1,5 +1,9 @@
 # Run Yugabyte in Docker and query with DataStation
 
+This tutorial walks through running Yugabyte in Docker, creating a
+table and loading it with data, and finally querying the database in
+DataStation.
+
 # Database initialization [Optional]
 
 If you want to follow along with this tutorial literally, in your

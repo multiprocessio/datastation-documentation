@@ -1,5 +1,8 @@
 # Run Prometheus in Docker and query with DataStation
 
+This tutorial walks through running Prometheus in Docker, loading it
+with data, and finally querying it in DataStation using PromQL.
+
 # Database initialization [Optional]
 
 If you want to follow along with this tutorial literally, in your
