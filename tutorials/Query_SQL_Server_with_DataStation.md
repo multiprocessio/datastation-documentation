@@ -1,25 +1,68 @@
 # Querying SQL Server with DataStation
 
+# Database initialization [Optional]
+
+If you want to follow along with this tutorial literally, in your
+terminal start SQL Server in Docker:
+
+```bash
+$ cid=$(docker run -d -p 1433:1433 -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(%)Password" mcr.microsoft.com/mssql/server)
+```
+
+Now create a table for some address data (it may take a few retries to
+run this command while SQL Server is initializing).
+
+```bash
+$ docker exec -t $cid /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "yourStrong(%)Password"
+1> CREATE DATABASE test
+2> GO
+1> USE test
+2> GO
+1> CREATE TABLE addresses (id BIGINT, location_id BIGINT, address_1 VARCHAR(MAX), address_2 VARCHAR(MAX), city VARCHAR(MAX), state_province VARCHAR(MAX), postal_code VARCHAR(MAX), country VARCHAR(MAX))
+2> GO
+```
+
+Then download a [CSV of sample
+addresses](https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv)
+from Github, copy it into the Docker container, and load the addresses
+into this new table.
+
+```bash
+$ curl -LO https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/addresses.csv
+$ docker cp ./addresses.csv $cid:/tmp/addresses.csv
+$ docker exec -t $cid /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "yourStrong(%)Password"
+1> USE test
+2> GO
+1> BULK INSERT addresses FROM '/tmp/addresses.csv' WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', TABLOCK)
+2> GO
+
+(21 rows affected)
+```
+
+And we're done!
+
 # Data source setup
 
-First create a new data source in the left sidebar.
+Now inside DataStation create a new data source in the left sidebar.
 
 ![Creating a new data source](/tutorials/create-data-source.gif)
 
-Give it a nice name so you easily can find it later. And select SQL Server
-in the Vendor dropdown.
+Give it a nice name so you can easily find it later. And select
+SQL Server in the Vendor dropdown.
 
 ![Creating a SQL Server data source](/tutorials/create-sqlserver-data-source.png)
 
 ## Host field
 
-If you are connecting to `localhost:1433` (the default), you can leave
-the host field blank. If your port is 1433 then you can always omit
-the colon and port and just specify the address.
+If you are connecting to `localhost:1433` (the default), you can
+leave the host field blank. If your port is 1433 then you can always
+omit the colon and port and just specify the address.
 
 ## Other fields
 
-Next set your database, username, and password.
+Next we set the database to `test`, the username to `SA`, and the
+password to `yourStrong(%)Password` (we specified this when we started
+the Docker container).
 
 ![Filled out SQL Server data source](/tutorials/sqlserver-data-source-filled.png)
 
@@ -47,16 +90,13 @@ button. Or you can reference the results in other panels.
 
 ![Download panel results](/tutorials/download-sqlserver-panel-results.png)
 
-# Graph the results
+# Display results
 
-Create a new panel. Change the type to Graph. Select the previous
-Database panel as the panel source. Then select the X and Y columns
-you'd like to graph.
+After running the query, a table button will appear below the panel
+next to the New Panel button. Click it to generate a table based on
+this panel.
 
-Finally, click the play button to generate the graph. You can download
-the graph as a PNG by clicking the download button.
+![Render results](/tutorials/graph-sqlserver-database-results.gif)
 
-![Graph database results](/tutorials/graph-sqlserver-database-results.gif)
-
-Note: Ctrl-r is a shortcut for hitting the play button when you are
-focused on one panel.
+Note: when the query panel changes in the future you'll need to
+manually re-run the table panel.
