@@ -142,7 +142,6 @@ SELECT * FROM basic_users;
 
 ![Run Athena query](/tutorials/run-athena-query.gif)
 
-;
 # Graph the results
 
 There is a graph button below the query panel, beside the New Panel
