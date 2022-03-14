@@ -59,8 +59,7 @@ button. Or you can reference the results in other panels.
 # Graph the results
 
 There is a graph button below the query panel, beside the New Panel
-button. Click it to generate a graph panel pointed at the query panel
-and have it run.
+button. Click it to generate a graph panel pointed at the query panel.
 
 ![Graph database results](/tutorials/graph-sqlite-database-results.gif)
 
