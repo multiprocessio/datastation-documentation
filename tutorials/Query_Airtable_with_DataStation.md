@@ -1,10 +1,10 @@
-# SQL + Airtable: Querying Airtable with DataStation
+# Airtable + SQL: Querying Airtable with DataStation
 
 Requires DataStation 0.8.0+.
 
 # Database initialization [Optional]
 
-If you want to follow along with this tutorial literally, create a new
+If you want to follow along with this tutorial verbatim, create a new
 base in Airtable and enter some basic data.
 
 ![New Airtable base](/tutorials/airtable-base.png)
