@@ -133,8 +133,7 @@ Now create a new panel and select the Database type.
 
 ## Run a query
 
-Let's pull population data from a public Athena dataset. Enter the
-following query and hit play!
+Enter the following query and hit play!
 
 ```sql
 SELECT * FROM basic_users;
