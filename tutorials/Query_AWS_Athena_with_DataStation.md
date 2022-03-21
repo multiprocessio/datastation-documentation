@@ -72,8 +72,8 @@ you can copy these permissions and modify them for own buckets:
             "Effect": "Allow",
             "Action": [
                 "glue:GetDatabase",
-                "athena:GetWorkGroup",
                 "s3:GetObject",
+                "athena:GetWorkGroup",
                 "athena:StartQueryExecution",
                 "glue:GetTables",
                 "athena:StopQueryExecution",
@@ -83,30 +83,39 @@ you can copy these permissions and modify them for own buckets:
                 "glue:GetTable"
             ],
             "Resource": [
-                "arn:aws:athena:*:693079658475:workgroup/primary",
                 "arn:aws:glue:us-east-1:693079658475:table/testdata/*",
                 "arn:aws:glue:us-east-1:693079658475:database/testdata",
                 "arn:aws:glue:us-east-1:693079658475:catalog",
                 "arn:aws:s3:::datastation-tests",
                 "arn:aws:s3:::datastation-test-results",
                 "arn:aws:s3:::datastation-test-results/*",
-                "arn:aws:s3:::datastation-tests/*"
+                "arn:aws:s3:::datastation-tests/*",
+                "arn:aws:athena:*:693079658475:workgroup/primary"
             ]
         },
         {
             "Sid": "VisualEditor1",
             "Effect": "Allow",
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::datastation-test-results/*"
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucketMultipartUploads",
+                "s3:AbortMultipartUpload",
+                "s3:ListBucketVersions",
+                "s3:CreateBucket",
+                "s3:ListBucket",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": [
+                "arn:aws:s3:::datastation-test-results",
+                "arn:aws:s3:::datastation-test-results/*"
+            ]
         }
     ]
 }
 ```
-
-Editor's note: there's something subtly wrong with this IAM
-policy. The user it's attached to can only query Athena after a root
-account has queried Athena. If you see what's wrong, please [let us
-know](https://github.com/multiprocessio/datastation-documentation/issues).
 
 # Data source setup
 
