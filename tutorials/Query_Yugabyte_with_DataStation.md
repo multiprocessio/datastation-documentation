@@ -6,7 +6,7 @@ DataStation.
 
 # Database initialization [Optional]
 
-If you want to follow along with this tutorial literally, in your
+If you want to follow along with this tutorial verbatim, in your
 terminal start Yugabyte in Docker:
 
 ```bash
@@ -62,7 +62,7 @@ If you are connecting to `localhost:5433` (the default), you can
 leave the host field blank. If your port is 5433 then you can always
 omit the colon and port and just specify the address.
 
-However:! when you are connecting to any PostgreSQL wire-compatible
+However: when you are connecting to any PostgreSQL wire-compatible
 database in DataStation (including Yugabyte) and you are connecting
 without TLS, you must explicitly opt out of TLS by specifying the
 query argument `?sslmode=disable`.
@@ -73,7 +73,7 @@ The database is the one we just created, `yb_demo`. And the default
 username and password for the Yugabyte docker image is `yugabyte` and
 `yugabyte`.
 
-![Filled Flux data source](/tutorials/yugabyte-data-source-filled.png)
+![Filled YugabyteDB data source](/tutorials/yugabyte-data-source-filled.png)
 
 ## SSH Proxy [Optional]
 

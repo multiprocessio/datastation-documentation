@@ -5,7 +5,7 @@ with data, and finally querying it in DataStation using InfluxQL.
 
 # Database initialization [Optional]
 
-If you want to follow along with this tutorial literally, in your
+If you want to follow along with this tutorial verbatim, in your
 terminal start Influx 1.x in Docker:
 
 ```bash
