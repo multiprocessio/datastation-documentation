@@ -62,6 +62,3 @@ There is a graph button below the query panel, beside the New Panel
 button. Click it to generate a graph panel pointed at the query panel.
 
 ![Graph database results](/tutorials/graph-sqlite-database-results.gif)
-
-Note: when the query panel changes in the future you'll need to
-manually re-run the graph panel.

@@ -91,6 +91,3 @@ next to the New Panel button. Click it to generate a table based on
 this panel.
 
 ![Render results](/tutorials/graph-mysql-database-results.gif)
-
-Note: when the query panel changes in the future you'll need to
-manually re-run the table panel.

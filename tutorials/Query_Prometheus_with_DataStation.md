@@ -88,6 +88,3 @@ always get it right. Select the name and age columns for the x and y
 dimensions respectively.
 
 ![Graph database results](/tutorials/graph-prometheus-database-results.gif)
-
-Note: when the query panel changes in the future you'll need to
-manually re-run the graph panel.
