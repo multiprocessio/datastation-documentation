@@ -1,8 +1,10 @@
 # Exploring data in CockroachDB with Python and Pandas in DataStation
 
 This tutorial walks through running CockroachDB in Docker, creating a
-table and loading it with data, and finally querying the database in
-DataStation.
+table and loading it with data, querying CockroachDB in DataStation,
+and exploring the data with Python and Pandas.
+
+This tutorial is also [available on Youtube](https://www.youtube.com/watch?v=q_jRBvbwIzU).
 
 # Database initialization [Optional]
 
