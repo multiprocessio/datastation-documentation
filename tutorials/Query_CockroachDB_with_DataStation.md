@@ -1,4 +1,4 @@
-# Run CockroachDB in Docker and query with DataStation
+# Exploring data in CockroachDB with Python and Pandas in DataStation
 
 This tutorial walks through running CockroachDB in Docker, creating a
 table and loading it with data, and finally querying the database in
@@ -121,26 +121,33 @@ Now create a new panel and select the Database type.
 
 ## Run a query
 
-Enter in `SELECT COUNT(1) as "count", gender FROM employees GROUP BY gender` and hit play!
+Enter in `SELECT * FROM employees` and hit play!
 
 ![Run CockroachDB query](/tutorials/run-cockroachdb-query.gif)
 
 Note: Ctrl-r is a shortcut for hitting the play button when you are
 focused on one panel.
 
-You can always download the results of a panel by hitting the download
-button. Or you can reference the results in other panels.
+# Load panel results into Pandas
 
-![Download panel results](/tutorials/download-cockroachdb-panel-results.png)
+Now we've got some data to play with. Create a new Code panel and enter the following:
 
-# Graph the results
+```python
+import pandas
 
-After running the query, a graph button will appear below the panel
-next to the New Panel button. Click it to generate a graph based on
+df = pandas.DataFrame(DM_getPanel('Query employee data'))
+youngest = df.sort_values('birth_date', ascending=False).head(10)
+DM_setPanel(youngest.to_dict('record'))
+```
+
+And run!
+
+![Load data into Pandas](/tutorials/cockroachdb-pandas-panel.gif)
+
+# Display
+
+After running the query, a table button will appear below the panel
+next to the New Panel button. Click it to generate a table based on
 this panel.
 
-DataStation tries to guess which columns to graph but it doesn't
-always get it right. Select the name and age columns for the x and y
-dimensions respectively.
-
-![Graph database results](/tutorials/graph-cockroachdb-database-results.gif)
+![Table results](/tutorials/table-cockroachdb-database-results.gif)
