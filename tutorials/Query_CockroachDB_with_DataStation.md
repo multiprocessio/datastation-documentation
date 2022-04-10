@@ -144,7 +144,7 @@ DM_setPanel(youngest.to_dict('record'))
 
 And run!
 
-![Load data into Pandas](/tutorials/cockroachdb-pandas-panel.gif)
+![Load data into Pandas](/tutorials/cockroachdb-pandas.gif)
 
 # Display
 
