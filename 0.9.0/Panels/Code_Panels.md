@@ -4,11 +4,11 @@ Code panels allow you to run code in a few major languages:
 JavaScript, Ruby, R, Julia, Python, and in-memory SQL.
 
 Like every other panel, code panels must have a result. You can set
-the result using the `DM_setPanel` function. And you can fetch other
-panels' results using the `DM_getPanel` function.
+the result using the `DM_setPanel` function. And you can fetch another
+panel's result using the `DM_getPanel` function.
 
-In-memory SQL code panels are the exception. These panels' results are
-set automatically to the result of the SQL query. You cannot use
+In-memory SQL code panels are the exception. Their result is
+set automatically to the result of their SQL query. You cannot use
 `DM_setPanel` in an in-memory SQL code panel.
 
 # Fetching another panel's result
