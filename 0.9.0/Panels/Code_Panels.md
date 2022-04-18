@@ -55,7 +55,8 @@ to column value. For example:
 [
   { "age": 1, "name": "Eliza" },
   { "age": 3, "name": "Javier" }
-]```
+]
+```
 
 # Modifying the default program implementation
 
