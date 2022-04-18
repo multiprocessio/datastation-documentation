@@ -49,16 +49,47 @@ MySQL, PostgreSQL and SQLite panels support the `DM_getPanel($panel)`
 function. You can either pass a panel index or the panel name. If you
 pass the panel name it must be quoted as a string literal.
 
-You can only call `DM_getPanel($panel)` on a panel that returns an
-array of objects.
-
 The result of calling `DM_getPanel($panel)` is a temporary table is
 created with the data from that panel. You can reference that table
 with the entire `DM_getPanel($panel)` call or with the `t_$panel`
 table alias. Multiple `DM_getPanel` calls for the same panel will not
 result in reloading of the panel into a temporary table.
 
-## Reading nested data from other panels
+## DM_getPanel result format requirements
+
+You can only call `DM_getPanel($panel)` on a panel that returns an
+array of objects. If the array of objects is nested within the panel
+result then you can specify a path to the array of objects in the
+second argument of the `DM_getPanel` call.
+
+For example if you have a JSON data structure like this in one panel:
+
+```
+{
+  "data": {
+    "data": [
+      {"id": 1, "name": "Corah"},
+      {"id": 3, "name": "Minh"}
+    ]
+  },
+  "total": 2
+}
+```
+
+You could run a SQL query against that panel like:
+
+```
+SELECT * FROM DM_getPanel(0, 'data.data')
+```
+
+## Macros
+
+All panels that have a panel body can use macros. So for panels that
+don't support the `DM_getPanel` function call (panels that are not
+MySQL, PostgreSQL or SQLite) you can still use macros to fetch another
+panel's result.
+
+Read more about macros [here](./Macros.md).
 
 # Connecting via SSH proxy
 
