@@ -42,7 +42,7 @@ Building off the last example, the whole code panel should like like this:
 
 Panel results can be of any format, as long as the value is
 serializable. But when setting a panel you intend to have read from a
-Table or Graph panel, there is a single accepted data format.
+Table, Graph, or panel that supports SQL, there is a single accepted data format.
 
 Table and Graph panels can only read from a panel that formats data as
 an array of objects. Each object-element must be a mapping of column
@@ -94,10 +94,11 @@ or queries to any system.
 
 # In-Memory SQL
 
-In-memory SQL is a way of running SQL queries solely
-against other panels without a running database. It is useful in
-situations where you don't have a database but the most natural way to
-express a join or filter is in SQL rather than code.
+In-memory SQL is a way of running SQL queries solely against other
+panels without a running database. You don't need to set up a data
+source to use it. It is useful in situations where you don't have a
+database but the most natural way to express a join or filter is in
+SQL rather than code.
 
 SQL panels can refer to the results of other panels by using
 `DM_getPanel($number)` where `$number` is the zero-indexed panel you
@@ -105,8 +106,13 @@ want to grab. Or, like other languages, you can also refer by name
 `DM_getPanel('$panelName')` where `$panelName` is the name of the
 panel you want to grab.
 
-`DM_getPanel` should only be called once. After that it can be
-referred to by the alias `t_$number` or `"t_$panelName"`. For example:
-`SELECT * FROM DM_getPanel(0) WHERE t_0.age < 12` will fetch all
-results from the first panel (zero-indexed) and filter out rows where
-the age column is less than 12.
+The panel you refer to must have a result that is in the array of
+objects format.
+
+Here's an example that will fetch all results from the first panel
+(zero-indexed) and filter out rows where the age column is less than
+12.
+
+```sql
+SELECT * FROM DM_getPanel(0) users WHERE users.age < 12
+```
