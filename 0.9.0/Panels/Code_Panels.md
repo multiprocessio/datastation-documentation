@@ -11,6 +11,7 @@ value for the code panel result. You can run custom calculations
 * Ruby
 * R
 * Julia
+* In-memory SQL
 
 # Importing 3rd party libraries
 
@@ -57,8 +58,13 @@ the age column is less than 12.
 
 Table and Graph panels must read from a panel that formats data as an
 array of objects. Each object-element must be a mapping of column name
-to column value. For example: `[{ "age": 1, "name": "Eliza" }, {
-"age": 3, "name": "Javier" }]`.
+to column value. For example:
+
+```json
+[
+  { "age": 1, "name": "Eliza" },
+  { "age": 3, "name": "Javier" }
+]```
 
 # Overriding program path
 
