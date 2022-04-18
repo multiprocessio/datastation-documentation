@@ -1,10 +1,10 @@
 # Macros
 
-Not all panels operate on code with the `DM_getPanel` function call
-available. To work around this, DataStation allows you to templatize
-any panel body (and sometimes other fields) using Jinja-like
-macros. The primary purpose of these macros is to read some panel
-results.
+Not all panels operate on code where the `DM_getPanel` builtin
+function call is available. To work around this, DataStation allows
+you to templatize any panel body (and sometimes other fields) using
+Jinja-like macros. The primary purpose of these macros is to read some
+panel results.
 
 A panel's macros are evaluated when you run the panel. But they happen
 before the panel's primary action. For example if you have macros in
@@ -38,3 +38,9 @@ filter:
 ```
 {{ DM_getPanel("0") | json }}
 ```
+
+# Macro language
+
+The underlying macro language is a Jinja-like language called
+[Pongo2](https://github.com/flosch/pongo2). Check out their docs for
+more details on what is available in this language.
