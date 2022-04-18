@@ -42,14 +42,11 @@ Building off the last example, the whole code panel should like like this:
 
 Panel results can be of any format, as long as the value is
 serializable. But when setting a panel you intend to have read from a
-Table or Graph panel, there is a [single accepted data
-format](#table-and-graph-panel-data-format).
+Table or Graph panel, there is a single accepted data format.
 
-## Table and Graph panel data format
-
-Table and Graph panels must read from a panel that formats data as an
-array of objects. Each object-element must be a mapping of column name
-to column value. For example:
+Table and Graph panels can only read from a panel that formats data as
+an array of objects. Each object-element must be a mapping of column
+name to column value. For example:
 
 ```json
 [
