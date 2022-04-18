@@ -1,12 +1,20 @@
 # Data Sources
 
-A data source is a definition of an external connection. You must fill
-out a data source for external SQL servers like MySQL or PostgreSQL so
-you can query them in a [Database panel](./Panels/Database_Panels.md).
+A data source is a definition of database credentials. You must fill
+out a data source to connect to a database using [Database
+panels](./Panels/Database_Panels.md). You do not need to define a data
+source for files and HTTP endpoints.
+
+![A PostgreSQL data source](/tutorials/basic-data-source.png)
+
+Once you have created a data source, you can create a [Database
+panel](./Panels/Database_Panels.md) to run queries against the data
+source.
 
 # With Server
 
-A data source can be definied as being proxied through an SSH tunnel
-by checking the **With Server** option. Once selected, you will be
-prompted to pick from one of the [SSH connections](./SSH_Connections.md) you set up
-previously.
+If you define an [SSH connections](./SSH_Connections.md) you will be
+able to select the server to proxy your database connection through an
+SSH tunnel.
+
+![A PostgreSQL data source with proxy](/tutorials/basic-data-source-proxy.png)
