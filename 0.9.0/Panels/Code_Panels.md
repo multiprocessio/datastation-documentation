@@ -1,7 +1,7 @@
 # Code Panels
 
 Code panels allow you to run code in a few major languages:
-JavaScript, Ruby, R, Julia, Python, and in-memory SQL.
+JavaScript, Deno, Ruby, R, Julia, Python, and in-memory SQL.
 
 Like every other panel, code panels must have a result. You can set
 the result using the `DM_setPanel` function. And you can fetch another
@@ -66,8 +66,13 @@ If an implementation by the name it looks doesn't exist, the panel
 will fail with an error when you run the panel.
 
 But maybe you have multiple instances of `python` on your machine. You
-can specify an exact path you want to use for each language
+can specify an absolute path you want to use for each language
 implementation in settings under the "Language Path Overrides" section.
+
+In this screenshot you can see the Deno, Julia, R, and Ruby language
+paths are not absolute. They will be looked up in `$PATH`. However,
+JavaScript, PHP and Python are absolute paths that will not be looked
+up in `$PATH`.
 
 ![Language path overrides](/tutorials/language-path-overrides.png)
 
