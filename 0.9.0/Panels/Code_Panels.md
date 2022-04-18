@@ -63,7 +63,7 @@ panel. The in-memory SQL option is an exception, you don't need
 anything installed to use it.
 
 If an implementation by the name it looks doesn't exist, the panel
-will fail with an error.
+will fail with an error when you run the panel.
 
 But maybe you have multiple instances of `python` on your machine. You
 can specify an exact path you want to use for each language
