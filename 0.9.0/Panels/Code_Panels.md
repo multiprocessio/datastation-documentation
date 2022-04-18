@@ -1,39 +1,93 @@
 # Code Panels
 
-These panels allow you to write any kind of program with no
-limitations. You can read values from previous panels and set your own
-value for the code panel result. You can run custom calculations
+Code panels allow you to run code in a few major languages:
+JavaScript, Ruby, R, Julia, Python, and in-memory SQL.
 
-# Supported languages
+Like every other panel, code panels must have a result. You can set
+the result using the `DM_setPanel` function. And you can fetch other
+panels' results using the `DM_getPanel` function.
 
-* JavaScript
-* Python
-* Ruby
-* R
-* Julia
-* In-memory SQL
+In-memory SQL code panels are the exception. These panels' results are
+set automatically to the result of the SQL query. You cannot use
+`DM_setPanel` in an in-memory SQL code panel.
+
+# Fetching another panel's result
+
+All code panels can grab another panel's result with the `DM_getPanel`
+function. This function takes one argument which is either the integer
+index of the panel (from top to bottom starting with `0`), or the
+panel's name.
+
+Let's say you have a [file panel](./File_Panels.md) that reads a CSV
+file from disk (the [Hudson River Plant
+dataset](https://catalog.data.gov/dataset/hudson-river-park-flora-plantings-beginning-1997)). And
+say the panel's name is `Load plant data`.
+
+![Load plant data from CSV file](/tutorials/file-plant-data.png)
+
+Once you have run the file panel, you can grab that data in a code
+panel using `DM_getPanel('Load plant data')`:
+
+![Transform plant data no set](/tutorials/transform-plant-data-no-set.png)
+
+# Setting a panel result
+
+`DM_setPanel` sets the current panel's result. It accepts one argument. The argument must be serializable. Serialization happens automatically. Some kinds of objects that aren't serializable are circular data structures.
+
+Building off the last example, the whole code panel should like like this:
+
+![Transform plant data](/tutorials/transform-plant-data.png)
+
+## Result format
+
+Panel results can be of any format, as long as the value is
+serializable. But when setting a panel you intend to have read from a
+Table or Graph panel, there is a [single accepted data
+format](#table-and-graph-panel-data-format).
+
+## Table and Graph panel data format
+
+Table and Graph panels must read from a panel that formats data as an
+array of objects. Each object-element must be a mapping of column name
+to column value. For example:
+
+```json
+[
+  { "age": 1, "name": "Eliza" },
+  { "age": 3, "name": "Javier" }
+]```
+
+# Modifying the default program implementation
+
+For most languages, DataStation looks in your `$PATH` environment
+variable for an implementation of the language you pick in the code
+panel. The in-memory SQL option is an exception, you don't need
+anything installed to use it.
+
+If an implementation by the name it looks doesn't exist, the panel
+will fail with an error.
+
+But maybe you have multiple instances of `python` on your machine. You
+can specify an exact path you want to use for each language
+implementation in settings under the "Language Path Overrides" section.
+
+![Language path overrides](/tutorials/language-path-overrides.png)
+
+Changes take effect the next time you run the code panel.
+
+If you ever mess up these settings, you can always revert back to the
+default by hitting the "Reset button".
 
 # Importing 3rd party libraries
 
-Since DataStation uses the language already installed, you can import
-any libraries you already have installed too.
+But when it succeeds, it's going to end up using some language
+implementation you have already installed on your system. This means
+you can import any libraries you already have installed too.
 
-This means that even when DataStation doesn't support a particular API
-or database, you can install a language-level package on your system
-so you can write your own custom code to make requests or queries to
-any system.
-
-# Communicating between panels
-
-Use `DM_getPanel($number)` or `DM_getPanel('$panelName')` to pull the
-results from another panel where `$number` is the index of the panel
-(starting from zero) or `$panelName` is the name of the panel you want
-to grab. Similarly, use `DM_setPanel($var)` to set the current panel's
-result.
-
-Panel results can be of any format. But when setting a panel you
-intend to have read from a Table or Graph panel, there is a [single
-accepted data format](#table-and-graph-panel-data-format).
+Furthermore,tThis means that even when DataStation doesn't support a
+particular API or database, you can install a language-level package
+on your system so you can write your own custom code to make requests
+or queries to any system.
 
 # In-Memory SQL
 
@@ -53,23 +107,3 @@ referred to by the alias `t_$number` or `"t_$panelName"`. For example:
 `SELECT * FROM DM_getPanel(0) WHERE t_0.age < 12` will fetch all
 results from the first panel (zero-indexed) and filter out rows where
 the age column is less than 12.
-
-# Table and Graph panel data format
-
-Table and Graph panels must read from a panel that formats data as an
-array of objects. Each object-element must be a mapping of column name
-to column value. For example:
-
-```json
-[
-  { "age": 1, "name": "Eliza" },
-  { "age": 3, "name": "Javier" }
-]```
-
-# Overriding program path
-
-If you want to use a version of the language that is not in your `$PATH`
-or not the default, you can modify
-`$HOME/DataStationProjects/.settings` and modify the `${language}Path`
-variable (e.g. `rPath`, `pythonPath`) to point at the program you'd
-like to be run.

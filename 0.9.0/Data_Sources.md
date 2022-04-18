@@ -7,6 +7,10 @@ source for files and HTTP endpoints.
 
 ![A PostgreSQL data source](/tutorials/basic-data-source.png)
 
+Once you have created a data source, you can create a [Database
+panel](./Panels/Database_Panels.md) to run queries against the data
+source.
+
 # With Server
 
 If you define an [SSH connections](./SSH_Connections.md) you will be
