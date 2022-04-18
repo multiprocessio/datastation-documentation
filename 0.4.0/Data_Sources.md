@@ -6,7 +6,7 @@ you can query them in a [Database panel](./Panels/Database_Panels.md).
 
 # With Server
 
-A data source can be definied as being proxied through an SSH tunnel
+A data source can be defined as being proxied through an SSH tunnel
 by checking the **With Server** option. Once selected, you will be
 prompted to pick from one of the [SSH connections](./SSH_Connections.md) you set up
 previously.
