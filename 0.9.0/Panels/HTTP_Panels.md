@@ -1,6 +1,6 @@
 # HTTP Panels
 
-These panels allow you to making API requests. You can make GET, POST,
+HTTP panels allow you to make API requests. You can make GET, POST,
 PUT, HEAD, or DELETE requests.
 
 # Macros
