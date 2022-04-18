@@ -1,16 +1,24 @@
 # File Panels
 
-These panels allow you to import files into DataStation from
+File panels allow you to import files into DataStation from
 disk. Every time the panel is run the file is read again.
+
+# With Server
+
+If you define an [SSH connections](./SSH_Connections.md) you will be
+able to select the server to read your file remotely over SSH.
 
 # Supported file formats
 
 Data
 
-* JSON
-* CSV
-* Parquet
+* JSON, JSON Newline, Concatenated JSON
+* CSV, TSV
+* Apache parquet
 * XLSX
+* ODS
+* Apache ORC
+* Apache Avro
 
 Logs
 
@@ -19,10 +27,3 @@ Logs
 * Nginx Access Logs
 * Newline-delimited JSON
 * Newline-delimited Custom Regex
-
-# With Server
-
-You can read files from remote servers with an SSH tunnel by checking
-the **With Server** option. Once selected, you will be prompted to
-pick from one of the [SSH connections](../SSH_Connections.md) you set
-up previously.

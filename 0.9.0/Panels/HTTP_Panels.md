@@ -15,6 +15,6 @@ Read more about macros [here](./Macros.md).
 
 # With Server
 
-HTTP requests can be proxied through an SSH tunnel by checking the
-**With Server** option. Once selected, you will be prompted to pick from
-one of the [SSH connections](../SSH_Connections) you set up previously.
+If you define an [SSH connections](./SSH_Connections.md) you will be
+able to select the server to proxy your HTTP request through an
+SSH tunnel.
