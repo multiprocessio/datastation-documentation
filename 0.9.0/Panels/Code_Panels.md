@@ -83,11 +83,11 @@ default by hitting the "Reset button".
 
 # Importing 3rd party libraries
 
-But when it succeeds, it's going to end up using some language
-implementation you have already installed on your system. This means
-you can import any libraries you already have installed too.
+DataStation uses the language implementation you have already
+installed on your system. This means you can import any libraries you
+already have installed too.
 
-Furthermore,tThis means that even when DataStation doesn't support a
+Furthermore, this means that even when DataStation doesn't support a
 particular API or database, you can install a language-level package
 on your system so you can write your own custom code to make requests
 or queries to any system.
