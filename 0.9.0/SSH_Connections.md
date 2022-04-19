@@ -13,10 +13,9 @@ private key file.
 
 # Defaults
 
-DataStation picks a default value for the Username and Private Key
+DataStation picks a default value for the `Username` and `Private Key`
 fields if the field is left blank.
 
-| Field       | Default                                                                                                                             |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Username    | Current system username (i.e. $USER on Linux and macOS)                                                                             |
-| Private Key | Checks each of these 3 files in order and picks the first one exists if any exist: ~/.ssh/id_rsa, ~/.ssh/id_dsa, ~/.ssh/id_ed25519. |
+The default value for `Username` is the current system username, i.e. `$USER` on Linux and macOS.
+
+The default value for `Private Key` is the first among these 3 files that exists: `~/.ssh/id_rsa`, `~/.ssh/id_dsa`, `~/.ssh/id_ed25519`.
