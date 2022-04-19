@@ -6,6 +6,8 @@ source](../Data_Sources.md) for the database you want to connect
 to. Then you can create a database panel and select the data source
 you created.
 
+![Basic database panel](/tutorials/basic-database-panel.png)
+
 # Reading from other panels
 
 MySQL, PostgreSQL and SQLite panels support the `DM_getPanel($panel)`
@@ -56,10 +58,11 @@ Read more about macros [here](./Macros.md).
 
 # Connecting via SSH proxy
 
-Queries can be proxied through an SSH tunnel by checking the **With
-Server** option on the data source definition or panel details. Once
-selected, you will be prompted to pick from one of the [SSH
-connections](../SSH_Connections.md) you set up previously.
+If you define an [SSH connections](../SSH_Connections.md) you will be
+able to select the server to proxy your database connection through an
+SSH tunnel.
+
+![Basic database panel via server](/tutorials/basic-database-panel-via-server.png)
 
 # PostgreSQL
 
