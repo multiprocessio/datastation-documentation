@@ -15,6 +15,10 @@ to a web server.
 
 Read more about macros [here](./Macros.md).
 
+# Supported file formats
+
+HTTP panels can handle all the same file formats that [file panels can](./File_Panels.md#supported-file-formats).
+
 # With Server
 
 If you define an [SSH connection](../SSH_Connections.md) you will be
