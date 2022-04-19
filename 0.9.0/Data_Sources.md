@@ -1,13 +1,13 @@
 # Data Sources
 
 A data source is a definition of database credentials. You must fill
-out a data source to connect to a database using [Database
-panels](./Panels/Database_Panels.md). You do not need to define a data
+out a data source to connect to a database with a [database
+panel](./Panels/Database_Panels.md). You do not need to define a data
 source for files and HTTP endpoints.
 
 ![A PostgreSQL data source](/tutorials/basic-data-source.png)
 
-Once you have created a data source, you can create a [Database
+Once you have created a data source, you can create a [database
 panel](./Panels/Database_Panels.md) to run queries against the data
 source.
 
