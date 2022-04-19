@@ -1,7 +1,7 @@
 # Code Panels
 
 Code panels allow you to run code in a few major languages:
-JavaScript, Deno, Ruby, R, Julia, Python, PHP, and in-memory SQL.
+JavaScript, Deno, Ruby, R, Julia, Python, PHP, and SQL.
 
 ![Basic code panel](/tutorials/basic-code-panel.png)
 
@@ -9,9 +9,9 @@ Like every other panel, code panels must have a result. You can set
 the result using the `DM_setPanel` function. And you can fetch another
 panel's result using the `DM_getPanel` function.
 
-In-memory SQL code panels are the exception. Their result is
+SQL code panels are the exception. Their result is
 set automatically to the result of their SQL query. You cannot use
-`DM_setPanel` in an in-memory SQL code panel.
+`DM_setPanel` in a SQL code panel.
 
 # Fetching another panel's result
 
@@ -61,7 +61,7 @@ name to column value. For example:
 
 For most languages, DataStation looks in your `$PATH` environment
 variable for an implementation of the language you pick in the code
-panel. The in-memory SQL option is an exception, you don't need
+panel. The SQL option is an exception, you don't need
 anything installed to use it.
 
 If an implementation by the name it looks doesn't exist, the panel
@@ -94,13 +94,16 @@ particular API or database, you can install a language-level package
 on your system so you can write your own custom code to make requests
 or queries to any system.
 
-# In-Memory SQL
+# SQL
 
-In-memory SQL is a way of running SQL queries solely against other
-panels without a running database. You don't need to set up a data
-source to use it. It is useful in situations where you don't have a
-database but the most natural way to express a join or filter is in
-SQL rather than code.
+SQL code panels provide a way of running SQL queries solely against
+other panels, without the need for any external database or data
+sources configured. You don't need to set up a data source to use
+it. It is useful in situations where you don't have a database but the
+most natural way to express a join or filter is in SQL rather than
+code.
+
+Under the hood this is implemented with SQLite.
 
 SQL panels can refer to the results of other panels by using
 `DM_getPanel($number)` where `$number` is the zero-indexed panel you
@@ -112,6 +115,6 @@ The panel you refer to must have a result that is in the array of
 objects format.
 
 Building off the above plant example, here's how you could calculate
-most common plants with in-memory SQL.
+most common plants with a SQL code panel.
 
 ![Basic SQL code panel](/tutorials/basic-sql-code.png)
