@@ -13,7 +13,7 @@ source.
 
 # With Server
 
-If you define an [SSH connections](./SSH_Connections.md) you will be
+If you define an [SSH connection](./SSH_Connections.md) you will be
 able to select the server to proxy your database connection through an
 SSH tunnel.
 

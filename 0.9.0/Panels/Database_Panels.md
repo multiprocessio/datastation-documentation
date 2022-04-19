@@ -1,6 +1,6 @@
 # Database Panels
 
-These panels allow you to query databases either locally or through an
+Database panels allow you to query databases either locally or through an
 SSH proxy. You must first configure a [data
 source](../Data_Sources.md) for the database you want to connect
 to. Then you can create a database panel and select the data source
@@ -58,7 +58,7 @@ Read more about macros [here](./Macros.md).
 
 # Connecting via SSH proxy
 
-If you define an [SSH connections](../SSH_Connections.md) you will be
+If you define an [SSH connection](../SSH_Connections.md) you will be
 able to select the server to proxy your database connection through an
 SSH tunnel.
 
