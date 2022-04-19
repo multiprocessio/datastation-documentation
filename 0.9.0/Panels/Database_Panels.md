@@ -62,6 +62,10 @@ If you define an [SSH connections](../SSH_Connections.md) you will be
 able to select the server to proxy your database connection through an
 SSH tunnel.
 
+NOTE: In some versions (including 0.9.0) there may be a bug where you
+need to specify `localhost` in the Data Source configuration. Normally
+the default would be set to `localhost` if you didn't set it.
+
 ![Basic database panel via server](/tutorials/basic-database-panel-via-server.png)
 
 # PostgreSQL
