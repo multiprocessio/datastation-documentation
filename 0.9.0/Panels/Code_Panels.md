@@ -111,10 +111,7 @@ panel you want to grab.
 The panel you refer to must have a result that is in the array of
 objects format.
 
-Here's an example that will fetch all results from the first panel
-(zero-indexed) and filter out rows where the age column is less than
-12.
+Building off the above plant example, here's how you could calculate
+most common plants with in-memory SQL.
 
-```sql
-SELECT * FROM DM_getPanel(0) users WHERE users.age < 12
-```
+![Basic SQL code panel](/tutorials/basic-sql-code.png)

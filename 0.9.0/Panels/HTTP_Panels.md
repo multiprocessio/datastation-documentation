@@ -5,6 +5,16 @@ PUT, HEAD, or DELETE requests.
 
 ![Basic http panel](/tutorials/basic-http-panel.png)
 
+# Results
+
+When DataStation understands the file format (because it recognized
+the URL's file extension or the HTTP response's `Content-Type`
+or because you overrode the response content type) it will try to put data
+in array of objects format.
+
+The exceptions to this are JSON responses (they can be any structure)
+and when you override the content type to be plain text.
+
 # Macros
 
 The URL, headers, and HTTP body in an HTTP panel can include

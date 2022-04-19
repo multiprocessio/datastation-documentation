@@ -5,6 +5,15 @@ disk. Every time the panel is run the file is read again.
 
 ![Load CSV data](/tutorials/file-plant-data-no-server.png)
 
+# Results
+
+When DataStation understands the file format (because it recognized
+the file extension or because you overrode the file content type) it
+will try to put data in array of objects format.
+
+The exceptions to this are JSON files (they can be any structure) and
+when you override the content type to be plain text.
+
 # With Server
 
 If you define an [SSH connection](../SSH_Connections.md) you will be
