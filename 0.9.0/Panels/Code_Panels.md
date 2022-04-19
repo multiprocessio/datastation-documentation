@@ -1,9 +1,9 @@
 # Code Panels
 
 Code panels allow you to run code in a few major languages:
-JavaScript, Deno, Ruby, R, Julia, Python, and in-memory SQL.
+JavaScript, Deno, Ruby, R, Julia, Python, PHP, and in-memory SQL.
 
-![Basic code panel](/tutorials/transform-plant-data.png)
+![Basic code panel](/tutorials/basic-code-panel.png)
 
 Like every other panel, code panels must have a result. You can set
 the result using the `DM_setPanel` function. And you can fetch another
