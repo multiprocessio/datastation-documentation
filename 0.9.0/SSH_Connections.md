@@ -7,3 +7,15 @@ you wouldn't otherwise be able to.
 
 You can connect using either a username/password combination or an SSH
 private key file.
+
+![Basic SSH connection](/tutorials/basic-ssh-connection.png)
+
+# Defaults
+
+DataStation picks a default value for the Username and Private Key
+fields if the field is left blank.
+
+| Field       | Default                                                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Username    | Current system username (i.e. $USER on Linux and macOS)                                                                             |
+| Private Key | Checks each of these 3 files in order and picks the first one exists if any exist: ~/.ssh/id_rsa, ~/.ssh/id_dsa, ~/.ssh/id_ed25519. |
