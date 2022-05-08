@@ -28,18 +28,16 @@ have already created or modified those files do not run this script.
 ```
 
 This install script will create a new `datastation` Linux user if it
-does not exist and will create a systemd service for DataStation and a
-systemd timer for DataStation exports.
+does not exist and will create a systemd service for DataStation.
 
-## Upgrade
-
-To upgrade an existing DataStation Server instance, 
+It will start a `datastation` systemd service but it will not succeed
+because you will need to edit the config file manually.
 
 # Configuration
 
 Next edit `/etc/datastation/config.yaml` and replace the defaults with your own settings.
 
-```
+```yaml
 auth:
   sessionSecret: "some good long random string" # Any strong random string for signing sessions
   openId:
@@ -53,12 +51,49 @@ server:
   publicUrl: https://datastation.mydomain.com # The address users will enter into the browser to use the app
   tlsKey: /home/server/certs/datastation.key.pem # Can be left blank and set at the reverse-proxy level if desired
   tlsCert: /home/server/certs/datastation.cert.pem
-
-database:
-  address: localhost # Address of your PostgreSQL instance
-  username: datastation # Should be a dedicated PostgreSQL user for DataStation
-  password: "some good password"
-  database: datastation # Should be a dedicated database within PostgreSQL for DataStation
 ```
 
-And then restart the systemd service: `sudo systemctl restart datastation`.
+Make sure to replace the `sessionSecret` with some random string.
+
+## Privileged ports
+
+If you want to run the server on ports below 1024 (i.e. privileged
+ports like 80 and 443), you will need to give `node` bind
+capabilities:
+
+```bash
+$ setcap 'cap_net_bind_service=+ep' $(which node)
+```
+
+## Authentication
+
+If you want to disable authentication, you can omit the entire
+`openId` section. But this is very dangerous! Since DataStation runs
+scripts on the server if you disable authentication and make your
+server public then anyone has access to do anything on the server.
+
+Any OpenID provider should work, but only Google auth has been tested.
+
+## Applying settings
+
+Once you are done editing settings, restart the systemd service:
+`systemctl restart datastation`.
+
+# Upgrade
+
+To upgrade an existing DataStation Server instance simply overwrite
+the files in the tar archive. For example if you first used the
+install script that comes with DataStation, it moves the datastation
+directory into `/usr/share/datastation`.
+
+So you can just delete that directory and then `mv datastation
+/usr/share/datastation`.
+
+Finally, restart the systemd service `systemctl restart datastation`.
+
+Migrations are automatically run on startup.
+
+# Logs
+
+You can view DataStation logs by running `journalctl -efu
+datastation`.
