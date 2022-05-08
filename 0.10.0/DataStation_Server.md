@@ -1,5 +1,9 @@
 # DataStation Server CE
 
+NOTE: The Server system and these instructions are in early
+stages. There may be bugs and it would help if you report them on
+Github or Discord.
+
 DataStation can run as a server giving you access to all your projects
 from any machine that can connect to the server. All scripts and
 queries run on the server rather than on your laptop.
