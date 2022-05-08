@@ -1,5 +1,21 @@
 # DataStation Server CE
 
+DataStation can run as a server giving you access to all your projects
+from any machine that can connect to the server. All scripts and
+queries run on the server rather than on your laptop.
+
+This is useful if you frequently switch machines or if you want to
+work on DataStation projects as a team.
+
+The server supports OpenID authentication. The Community Edition does
+not have an advanced concept of users. It will hook into your OpenID
+system but does not come with access control beyond existing
+validating with your OpenID provider.
+
+However, coming shortly will be support for read-only dashboards built
+on top of your projects. And coming shortly will also be the ability
+to schedule recurring runs and exports of your projects to email.
+
 # Prerequisites
 
 * x86_64 Linux machine
