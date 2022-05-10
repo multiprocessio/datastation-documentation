@@ -27,10 +27,10 @@ to schedule recurring runs and exports of your projects to email.
 
 # Install
 
-Download [datastation-server-x64-0.10.0.tar.gz](https://github.com/multiprocessio/datastation/releases/download/0.10.0/datastation-server-x64-0.10.0.tar.gz).
+Download [datastation-server-x64-0.10.1.tar.gz](https://github.com/multiprocessio/datastation/releases/download/0.10.1/datastation-server-x64-0.10.1.tar.gz).
 
 ```
-curl -LO https://github.com/multiprocessio/datastation/releases/download/0.10.0/datastation-server-x64-0.10.0.tar.gz
+curl -LO https://github.com/multiprocessio/datastation/releases/download/0.10.1/datastation-server-x64-0.10.1.tar.gz
 tar xvzf datastation-server-*.tar.gz
 ```
 
