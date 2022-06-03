@@ -100,3 +100,6 @@ next to the New Panel button. Click it to generate a table based on
 this panel.
 
 ![Render results](/tutorials/graph-postgresql-database-results.gif)
+
+From here you can do more analysis or export results to clipboard, a
+file, HTTP server, etc.

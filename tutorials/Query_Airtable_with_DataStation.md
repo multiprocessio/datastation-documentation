@@ -55,7 +55,7 @@ Now that the data is loaded in DataStation we can use DataStation's
 scripting abilities to run a program using the Airtable data. We'll
 run a SQL program that counts the number of applied applicants.
 
-Create a new panel, select SQL as the language, enter this query and
+Create a new Code panel, select SQL as the language, enter this query and
 hit run.
 
 ```
