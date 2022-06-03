@@ -97,3 +97,6 @@ next to the New Panel button. Click it to generate a graph based on
 this panel.
 
 ![Graph results](/tutorials/graph-google-sheets.gif)
+
+From here you can do more analysis or export results to clipboard, a
+file, HTTP server, etc.
