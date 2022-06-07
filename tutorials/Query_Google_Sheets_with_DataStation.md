@@ -2,6 +2,11 @@
 
 Requires DataStation 0.10.0+.
 
+In this tutorial we'll load a CSV of population data into Google
+Sheets, set up the permissions to be able to read this query from the
+Sheets API, pull the Sheet data into DataStation, and run SQL queries
+on the data using DataStation's builtin SQL engine.
+
 # Database initialization [Optional]
 
 If you want to follow along with this tutorial verbatim, create a new
