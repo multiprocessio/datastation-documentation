@@ -71,7 +71,7 @@ Docker container).
 
 ## SSH Proxy [Optional]
 
-If you want connect to a MySQL database on a remote server through an
+If you want connect to a PostgreSQL database on a remote server through an
 SSH proxy, you will need to set up the SSH connection to that server
 first. Once you do, you can select that connection in the "Via Server"
 dropdown within the data source editor.
