@@ -79,35 +79,35 @@ you might set the database address to `localhost?sslmode=disable`.
 
 Traditional SQL
 
-* PostgreSQL [Tutorial](../tutorials/Query_PostgreSQL_with_DataStation.md)
-* MySQL [Tutorial](../tutorials/Query_MySQL_with_DataStation.md), MariaDB
-* SQLite [Tutorial](../tutorials/Query_SQLite_with_DataStation.md)
-* SQL Server [Tutorial](../tutorials/Query_SQL_Server_with_DataStation.md)
-* Oracle [Tutorial](../tutorials/Query_Oracle_with_DataStation.md)
-* CockroachDB [Tutorial](../tutorials/Query_CockroachDB_with_DataStation.md)
+* PostgreSQL [Tutorial](../../tutorials/Query_PostgreSQL_with_DataStation.md)
+* MySQL [Tutorial](../../tutorials/Query_MySQL_with_DataStation.md), MariaDB
+* SQLite [Tutorial](../../tutorials/Query_SQLite_with_DataStation.md)
+* SQL Server [Tutorial](../../tutorials/Query_SQL_Server_with_DataStation.md)
+* Oracle [Tutorial](../../tutorials/Query_Oracle_with_DataStation.md)
+* CockroachDB [Tutorial](../../tutorials/Query_CockroachDB_with_DataStation.md)
 
 Warehouse
 
-* Google BigQuery [Tutorial](../tutorials/Query_BigQuery_with_DataStation.md)
-* AWS Athena [Tutorial](../tutorials/Query_AWS_Athena_with_DataStation.md)
+* Google BigQuery [Tutorial](../../tutorials/Query_BigQuery_with_DataStation.md)
+* AWS Athena [Tutorial](../../tutorials/Query_AWS_Athena_with_DataStation.md)
 * Snowflake
 
 Document
-* Elasticsearch [Tutorial](../tutorials/Query_Elasticsearch_with_DataStation.md)
+* Elasticsearch [Tutorial](../../tutorials/Query_Elasticsearch_with_DataStation.md)
 * CrateDB
 
 Apps
-* Airtable [Tutorial](../tutorials/Query_Airtable_with_DataStation.md)
+* Airtable [Tutorial](../../tutorials/Query_Airtable_with_DataStation.md)
 
 Time Series
 
-* ClickHouse[Tutorial](../tutorials/Query_ClickHouse_with_DataStation.md)
-* YugabyteDB [Tutorial](../tutorials/Query_Yugabyte_with_DataStation.md)
-* Cassandra, Scylla [Tutorial](../tutorials/Query_Scylla_with_DataStation.md)
+* ClickHouse[Tutorial](../../tutorials/Query_ClickHouse_with_DataStation.md)
+* YugabyteDB [Tutorial](../../tutorials/Query_Yugabyte_with_DataStation.md)
+* Cassandra, Scylla [Tutorial](../../tutorials/Query_Scylla_with_DataStation.md)
 * QuestDB
 * TimescaleDB
 
 Metrics
 
-* Prometheus [Tutorial](../tutorials/Query_Prometheus_with_DataStation.md)
-* Influx 2 (Flux) [Tutorial](../tutorials/Query_Influx_(2.x)_with_DataStation_(Flux).md), Influx 1 (InfluxQL) [Tutorial](../tutorials/Query_Influx_(1.x)_with_DataStation_(InfluxQL).md)
+* Prometheus [Tutorial](../../tutorials/Query_Prometheus_with_DataStation.md)
+* Influx 2 (Flux) [Tutorial](../../tutorials/Query_Influx_(2.x)_with_DataStation_(Flux).md), Influx 1 (InfluxQL) [Tutorial](../../tutorials/Query_Influx_(1.x)_with_DataStation_(InfluxQL).md)
